@@ -147,6 +147,7 @@ abstract class AbstractPage {
             'hasBoard' => filter_var(Config::get('forum_url'), FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED),
             'hasAdminAccess' => isset($_SESSION['admin_login']),
             'servertime' => _date("M D d H:i:s", TIMESTAMP, $USER['timezone']),
+            'userrank' => $USER['total_rank'],
         ));
     }
 

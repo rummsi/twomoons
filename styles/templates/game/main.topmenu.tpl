@@ -26,7 +26,7 @@
                                     <a href="game.php?page=notes" class="overlay" data-overlay-title="My notes" data-overlay-class="notices" data-overlay-popup-width="750" data-overlay-popup-height="480" accesskey="">{$LNG.lm_notes}</a>
                                 </li>{/if}{if isModulAvalible($smarty.const.MODULE_STATISTICS)}
                                 <li>
-                                    <a href="game.php?page=statistics" accesskey="">{$LNG.lm_statistics}</a>(165)
+                                    <a href="game.php?page=statistics" accesskey="">{$LNG.lm_statistics}</a>({$userrank})
                                 </li>{/if}{if isModulAvalible($smarty.const.MODULE_SEARCH)}
                                 <li><a class="overlay" href="game.php?page=search&amp;ajax=1" data-overlay-title="Search Universe" data-overlay-close="__default closeSearch" data-overlay-class="search" accesskey="">{$LNG.lm_search}</a>
                                 </li>{/if}
