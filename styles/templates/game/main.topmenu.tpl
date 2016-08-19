@@ -4,7 +4,7 @@
                     <a name="anchor"></a>
                     <div id="info" class="header normal">
                         <a href="game.php?page=overview">
-                            <img src="ficheiros/pixel.gif" id="logoLink"></a>
+                            <img src="images/pixel.gif" id="logoLink"></a>
                         <div id="star"></div>
                         <div id="star1"></div>
                         <div id="star2"></div>
@@ -13,7 +13,7 @@
                         <div id="bar">
                             <ul>
                                 <li id="playerName">
-                                    Player:
+                                    {$LNG['gl_player']}:
                                     <span class="textBeefy">DarkPriest</span>
                                 </li>{if isModulAvalible($smarty.const.MODULE_BUDDYLIST)}
                                 <li>
@@ -34,6 +34,6 @@
                                 <li><a href="game.php?page=ticket" target="_blank">{$LNG.lm_support}</a></li>{/if}{if isModulAvalible($smarty.const.MODULE_CHAT)}
                                 <li><a href="game.php?page=chat" target="">{$LNG.lm_chat}</a></li>{/if}
                                 <li><a href="game.php?page=logout">{$LNG.lm_logout}</a></li>
-                                <li class="OGameClock">27.03.2015 <span>14:36:28</span></li>
+                                <li class="OGameClock">{$servertime}</li>
                             </ul>
                         </div>
