@@ -148,6 +148,7 @@ abstract class AbstractPage {
             'hasAdminAccess' => isset($_SESSION['admin_login']),
             'servertime' => _date("M D d H:i:s", TIMESTAMP, $USER['timezone']),
             'userrank' => $USER['total_rank'],
+            'fleets' => $this->GetFleets(),
         ));
     }
 
@@ -246,6 +247,15 @@ abstract class AbstractPage {
         $this->save();
         HTTP::redirectTo($url);
         exit;
+    }
+
+    private function GetFleets() {
+        global $USER, $PLANET;
+        require_once('includes/classes/class.FlyingFleetsTable.php');
+        $fleetTableObj = new FlyingFleetsTable;
+        $fleetTableObj->setUser($USER['id']);
+        $fleetTableObj->setPlanet($PLANET['id']);
+        return $fleetTableObj->renderTable();
     }
 
 }

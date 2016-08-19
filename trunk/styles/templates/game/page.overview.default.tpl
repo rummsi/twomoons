@@ -36,15 +36,6 @@
 	</tr>
 	{/if}
 	<tr>
-		<th colspan="3">{$LNG.ov_events}</th>
-	</tr>
-	{foreach $fleets as $index => $fleet}
-	<tr>
-		<td id="fleettime_{$index}" class="fleets" data-fleet-end-time="{$fleet.returntime}" data-fleet-time="{$fleet.resttime}">{pretty_fly_time({$fleet.resttime})}</td>
-		<td colspan="2">{$fleet.text}</td>
-	</tr>
-	{/foreach}
-	<tr>
 		<td>{if $Moon}<a href="game.php?page=overview&amp;cp={$Moon.id}&amp;re=0" title="{$Moon.name}"><img src="{$dpath}planeten/mond.jpg" height="50" width="50" alt="{$Moon.name} ({$LNG.fcm_moon})"></a><br>{$Moon.name} ({$LNG.fcm_moon}){else}&nbsp;{/if}</td>
 		<td>
 			<img src="{$dpath}planeten/{$planetimage}.jpg" height="200" width="200" alt="{$planetname}">
