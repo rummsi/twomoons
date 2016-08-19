@@ -65,15 +65,6 @@ class ShowOverviewPage extends AbstractPage {
         );
     }
 
-    private function GetFleets() {
-        global $USER, $PLANET;
-        require_once('includes/classes/class.FlyingFleetsTable.php');
-        $fleetTableObj = new FlyingFleetsTable;
-        $fleetTableObj->setUser($USER['id']);
-        $fleetTableObj->setPlanet($PLANET['id']);
-        return $fleetTableObj->renderTable();
-    }
-
     function savePlanetAction() {
         global $USER, $PLANET;
         $password = HTTP::_GP('password', '', true);
@@ -237,7 +228,6 @@ class ShowOverviewPage extends AbstractPage {
             'userid' => $USER['id'],
             'buildInfo' => $buildInfo,
             'Moon' => $Moon,
-            'fleets' => $this->GetFleets(),
             'AllPlanets' => $AllPlanets,
             'AdminsOnline' => $AdminsOnline,
             'teamspeakData' => $this->GetTeamspeakData(),

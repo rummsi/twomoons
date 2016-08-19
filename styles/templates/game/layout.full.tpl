@@ -13,12 +13,16 @@
                             <div id="eventListWrap">
                                 <div id="eventHeader">
                                     <a class="close_details eventToggle" href="javascript:void(0);">
-                                        <img src="ficheiros/3e567d6f16d040326c7a0ea29a4f41.gif" height="16" width="16">
+                                        <img src="images/pixel.gif" height="16" width="16">
                                     </a>
-                                    <h2>Events</h2>
+                                    <h2>{$LNG.ov_events}</h2>
                                 </div>
                                 <table id="eventContent">
-                                    <tbody>
+                                    <tbody>{foreach $fleets as $index => $fleet}
+                                        <tr>
+                                            <td id="fleettime_{$index}" class="fleets" data-fleet-end-time="{$fleet.returntime}" data-fleet-time="{$fleet.resttime}">{pretty_fly_time({$fleet.resttime})}</td>
+                                            <td colspan="2">{$fleet.text}</td>
+                                        </tr>{/foreach}{*
                                         <tr class="eventFleet" id="eventRow-324779" data-mission-type="3" data-return-flight="false" data-arrival-time="1427467041">
                                             <td class="countDown friendly textBeefy" id="counter-eventlist-324779">53s</td>
                                             <td class="arrivalTime">14:37:21 Clock</td>
@@ -209,7 +213,7 @@
                                             </td>
                                             <td class="sendMail">
                                             </td>
-                                        </tr>
+                                        </tr>*}
                                     </tbody>
                                 </table>
                                 <div id="eventFooter"></div>
