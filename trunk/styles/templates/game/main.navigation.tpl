@@ -1,42 +1,141 @@
-<div id="leftmenu">
-	<ul id="menu">
-		<li class="menu-head"><a href="game.php?page=changelog">{$LNG.lm_changelog}</a></li>
-		<li class="menucat1-head"></li>
-		<li><a href="game.php?page=overview">{$LNG.lm_overview}</a></li>
-		{if isModulAvalible($smarty.const.MODULE_IMPERIUM)}<li><a href="game.php?page=imperium">{$LNG.lm_empire}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_RESEARCH)}<li><a href="game.php?page=research">{$LNG.lm_research}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_BUILDING)}<li><a href="game.php?page=buildings">{$LNG.lm_buildings}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_SHIPYARD_FLEET)}<li><a href="game.php?page=shipyard&amp;mode=fleet">{$LNG.lm_shipshard}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_SHIPYARD_DEFENSIVE)}<li><a href="game.php?page=shipyard&amp;mode=defense">{$LNG.lm_defenses}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_OFFICIER) || isModulAvalible($smarty.const.MODULE_DMEXTRAS)}<li><a href="game.php?page=officier">{$LNG.lm_officiers}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_TRADER)}<li><a href="game.php?page=trader">{$LNG.lm_trader}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_FLEET_TRADER)}<li><a href="game.php?page=fleetDealer">{$LNG.lm_fleettrader}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_FLEET_TABLE)}<li><a href="game.php?page=fleetTable">{$LNG.lm_fleet}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_TECHTREE)}<li><a href="game.php?page=techtree">{$LNG.lm_technology}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_RESSOURCE_LIST)}<li><a href="game.php?page=resources">{$LNG.lm_resources}</a></li>{/if}
-		<li class="menucat2-head"></li>
-		{if isModulAvalible($smarty.const.MODULE_GALAXY)}<li><a href="game.php?page=galaxy">{$LNG.lm_galaxy}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_ALLIANCE)}<li><a href="game.php?page=alliance">{$LNG.lm_alliance}</a></li>{/if}
-        {if !empty($hasBoard)}<li><a href="game.php?page=board" target="forum">{$LNG.lm_forums}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_STATISTICS)}<li><a href="game.php?page=statistics">{$LNG.lm_statistics}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_RECORDS)}<li><a href="game.php?page=records">{$LNG.lm_records}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_BATTLEHALL)}<li><a href="game.php?page=battleHall">{$LNG.lm_topkb}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_SEARCH)}<li><a href="game.php?page=search">{$LNG.lm_search}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_CHAT)}<li><a href="game.php?page=chat">{$LNG.lm_chat}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_SUPPORT)}<li><a href="game.php?page=ticket">{$LNG.lm_support}</a></li>{/if}
-		<li><a href="game.php?page=questions">{$LNG.lm_faq}</a></li>
-		{if isModulAvalible($smarty.const.MODULE_BANLIST)}<li><a href="game.php?page=banList">{$LNG.lm_banned}</a></li>{/if}
-		<li><a href="index.php?page=rules" target="rules">{$LNG.lm_rules}</a></li>
-		{if isModulAvalible($smarty.const.MODULE_SIMULATOR)}<li><a href="game.php?page=battleSimulator">{$LNG.lm_battlesim}</a></li>{/if}
 
-		<li class="menucat3-head"></li>
-		{if isModulAvalible($smarty.const.MODULE_MESSAGES)}<li><a href="game.php?page=messages">{$LNG.lm_messages}{nocache}{if $new_message > 0}<span id="newmes"> (<span id="newmesnum">{$new_message}</span>)</span>{/if}{/nocache}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_NOTICE)}<li><a href="javascript:OpenPopup('?page=notes', 'notes', 720, 300);">{$LNG.lm_notes}</a></li>{/if}
-		{if isModulAvalible($smarty.const.MODULE_BUDDYLIST)}<li><a href="game.php?page=buddyList">{$LNG.lm_buddylist}</a></li>{/if}
-		<li><a href="game.php?page=settings">{$LNG.lm_options}</a></li>
-		<li><a href="game.php?page=logout">{$LNG.lm_logout}</a></li>
-		{if $authlevel > 0}<li><a href="./admin.php" style="color:lime">{$LNG.lm_administration} ({$VERSION})</a></li>{/if}
-		<li class="menu-footer"></li>
-	</ul>
-	<div id="disclamer"><a href="index.php?page=disclamer" target="_blank">{$LNG.lm_disclamer}</a></div>
-</div>
+                    <!-- LEFTMENU -->
+                    <div id="links">
+                        <ul id="menuTable" class="leftmenu">
+                            <li>
+                                <span class="menu_icon">
+                                    <a href="game.php?page=eventList" class="eventToggle tooltipRight js_hideTipOnMobile" target="_self" title="Events">
+                                        <div class="menuImage overview active"></div>
+                                    </a>
+                                </span>
+                                <a class="menubutton  selected" href="game.php?page=overview" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_overview}</span>
+                                </a>
+                            </li>{if isModulAvalible($smarty.const.MODULE_BUILDING)}
+                            <li>{if isModulAvalible($smarty.const.MODULE_RESSOURCE_LIST)}
+                                <span class="menu_icon">
+                                    <a href="game.php?page=resources" class="tooltipRight js_hideTipOnMobile" target="_self" title="{$LNG.lm_resources}">
+                                        <div class="menuImage resources"></div>
+                                    </a>
+                                </span>{/if}
+                                <a class="menubutton " href="game.php?page=buildings" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_buildings}</span>
+                                </a>
+                            </li>{/if}
+                            <li>
+                                <span class="menu_icon">
+                                    <div class="menuImage station"></div>
+                                </span>
+                                <a class="menubutton " href="game.php?page=station" accesskey="" target="_self">
+                                    <span class="textlabel">Facilities</span>
+                                </a>
+                            </li>{if isModulAvalible($smarty.const.MODULE_TRADER)}
+                            <li>
+                                <span class="menu_icon">
+                                    <a href="game.php?page=fleetDealer&amp;animation=false" class="trader tooltipRight js_hideTipOnMobile" target="_self" title="{$LNG.lm_fleettrader}">
+                                        <div class="menuImage traderOverview"></div>
+                                    </a>
+                                </span>
+                                <a class="menubutton premiumHighligt" href="game.php?page=trader" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_trader}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_RESEARCH)}
+                            <li>{if isModulAvalible($smarty.const.MODULE_TECHTREE)}
+                                <span class="menu_icon">
+                                    <a href="game.php?page=techtree&amp;tab=3&amp;open=all" class="overlay tooltipRight js_hideTipOnMobile" target="_blank" title="{$LNG.lm_technology}">
+                                        <div class="menuImage research"></div>
+                                    </a>
+                                </span>{/if}
+                                <a class="menubutton " href="game.php?page=research" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_research}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_SHIPYARD_FLEET)}
+                            <li>
+                                <span class="menu_icon">
+                                    <div class="menuImage shipyard"></div>
+                                </span>
+                                <a class="menubutton " href="game.php?page=shipyard&amp;mode=fleet" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_shipshard}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_SHIPYARD_DEFENSIVE)}
+                            <li>
+                                <span class="menu_icon">
+                                    <div class="menuImage defense"></div>
+                                </span>
+                                <a class="menubutton " href="game.php?page=shipyard&amp;mode=defense" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_defenses}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_FLEET_TABLE)}
+                            <li>
+                                <span class="menu_icon">
+                                    <a href="game.php?page=movement" class="tooltipRight js_hideTipOnMobile" target="_self" title="Fleet movement">
+                                        <div class="menuImage fleet1 active"></div>
+                                    </a>
+                                </span>
+                                <a class="menubutton " href="game.php?page=fleetTable" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_fleet}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_GALAXY)}
+                            <li>
+                                <span class="menu_icon">
+                                    <div class="menuImage galaxy"></div>
+                                </span>
+                                <a class="menubutton " href="game.php?page=galaxy" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_galaxy}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_IMPERIUM)}
+                            <li>
+                                <span class="menu_icon">
+                                    <div class="menuImage empire"></div>
+                                </span>
+                                <a class="menubutton " href="game.php?page=imperium" accesskey="" target="_blank">
+                                    <span class="textlabel">{$LNG.lm_empire}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_ALLIANCE)}
+                            <li>
+                                <span class="menu_icon">
+                                    <a href="game.php?page=alliance&mode=circular&amp;tab=broadcast" class="tooltipRight js_hideTipOnMobile" target="_self" title="Circular message">
+                                        <div class="menuImage alliance"></div>
+                                    </a>
+                                </span>
+                                <a class="menubutton " href="game.php?page=alliance" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_alliance}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_OFFICIER) || isModulAvalible($smarty.const.MODULE_DMEXTRAS)}
+                            <li>
+                                <span class="menu_icon">
+                                    <div class="menuImage premium"></div>
+                                </span>
+                                <a class="menubutton premiumHighligt officers" href="game.php?page=officier" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_officiers}</span>
+                                </a>
+                            </li>{/if}{if isModulAvalible($smarty.const.MODULE_RECORDS)}
+                            <li>
+                                <span class="menu_icon">
+                                    <div class="menuImage feedback"></div>
+                                </span>
+                                <a class="menubutton overlay" href="game.php?page=records&amp;ajax=1" target="_self" data-overlay-title="Feedback">
+                                    <span class="textlabel">{$LNG.lm_records}</span>
+                                </a>
+                            </li>{/if}{if $authlevel > 0}
+                            <li>
+                                <span class="menu_icon">
+                                    <a href="ame.php?page=shop#page=inventory&amp;category=d8d49c315fa620d9c7f1f19963970dea59a0e3be" class="tooltipRight js_hideTipOnMobile" target="_self" title="Inventory">
+                                        <div class="menuImage shop"></div>
+                                    </a>
+                                </span>
+                                <a class="menubutton premiumHighligt" href="./admin.php" style="color:lime"" accesskey="" target="_self">
+                                    <span class="textlabel">{$LNG.lm_administration}</span>
+                                </a>
+                            </li>{/if}
+                        </ul>
+                        <div class="adviceWrapper">
+                            <div id="advice-bar">
+                            </div>
+                        </div>
+                        <div id="toolLinksWrapper">
+                            <ul id="menuTableTools" class="leftmenu"></ul>
+                        </div>
+                        <br class="clearfloat">
+                    </div>
+                    <!-- END LEFTMENU -->
