@@ -112,7 +112,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     /**
      * smarty version
      */
-    const SMARTY_VERSION = '3.1.36';
+    const SMARTY_VERSION = '3.1.34-dev-7';
     /**
      * define variable scopes
      */
@@ -800,7 +800,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      * @param mixed $index    index of directory to get, null to get all
      * @param bool  $isConfig true for config_dir
      *
-     * @return array|string list of template directories, or directory of $index
+     * @return array list of template directories, or directory of $index
      */
     public function getTemplateDir($index = null, $isConfig = false)
     {
