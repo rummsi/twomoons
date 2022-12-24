@@ -1,0 +1,26 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}${package_2moonsSR}
+${licensePrefix}Copyright (C) 2012
+${licensePrefix}
+${licensePrefix}This program is free software: you can redistribute it and/or modify
+${licensePrefix}it under the terms of the GNU General Public License as published by
+${licensePrefix}the Free Software Foundation, either version 3 of the License, or
+${licensePrefix}(at your option) any later version.
+${licensePrefix}
+${licensePrefix}This program is distributed in the hope that it will be useful,
+${licensePrefix}but WITHOUT ANY WARRANTY; without even the implied warranty of
+${licensePrefix}MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+${licensePrefix}GNU General Public License for more details.
+${licensePrefix}
+${licensePrefix}You should read the GNU General Public License, see <http://www.gnu.org/licenses/>.
+${licensePrefix}
+${licensePrefix}${package_2moonsSR}
+${licensePrefix}@${user_2moonsSR}
+${licensePrefix}@${nameAndExt}
+${licensePrefix}@license http://www.gnu.org/licenses/gpl.html GNU GPLv3 License
+${licensePrefix}@${version_2moonsSR}  ${date} ${time}
+<#if licenseLast??>
+${licenseLast}
+</#if>
