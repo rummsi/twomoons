@@ -3,7 +3,7 @@
         'name' => 'vendor/new-star',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '3a6d1730f86346e266bc29f86c3efcbf20ff8f95',
+        'reference' => 'd3a67e825ec0cb4d95b09aa4aaecef1c7cc0a852',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'google/recaptcha' => array(
-            'pretty_version' => '1.1.2',
-            'version' => '1.1.2.0',
-            'reference' => '2b7e00566afca82a38a1d3adb8e42c118006296e',
+            'pretty_version' => '1.1.3',
+            'version' => '1.1.3.0',
+            'reference' => '5a56d15ca10a7b75158178752b2ad8f755eb4f78',
             'type' => 'library',
             'install_path' => __DIR__ . '/../google/recaptcha',
             'aliases' => array(),
@@ -40,7 +40,7 @@
         'vendor/new-star' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '3a6d1730f86346e266bc29f86c3efcbf20ff8f95',
+            'reference' => 'd3a67e825ec0cb4d95b09aa4aaecef1c7cc0a852',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
