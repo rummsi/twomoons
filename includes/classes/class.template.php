@@ -14,8 +14,6 @@
  * @Basis 2Moons: XG-Project v2.8.0
  * @Basis New-Star: 2Moons v1.8.0
  */
-
-require('includes/libs/Smarty/Smarty.class.php');
 		
 class template extends Smarty
 {
