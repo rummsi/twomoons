@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": ">= 7.4",
-        "phpmailer/phpmailer": "v5.2.23"
+        "phpmailer/phpmailer": "v5.2.23",
+        "google/recaptcha": "1.1.2"
     },
     "require-dev": {
         "smarty/smarty": "v3.1.34"

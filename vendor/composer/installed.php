@@ -3,13 +3,22 @@
         'name' => 'vendor/new-star',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'bca64f4e81aec8bffb26595959e4c2a065823366',
+        'reference' => '3a6d1730f86346e266bc29f86c3efcbf20ff8f95',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'google/recaptcha' => array(
+            'pretty_version' => '1.1.2',
+            'version' => '1.1.2.0',
+            'reference' => '2b7e00566afca82a38a1d3adb8e42c118006296e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../google/recaptcha',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'phpmailer/phpmailer' => array(
             'pretty_version' => 'v5.2.23',
             'version' => '5.2.23.0',
@@ -31,7 +40,7 @@
         'vendor/new-star' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'bca64f4e81aec8bffb26595959e4c2a065823366',
+            'reference' => '3a6d1730f86346e266bc29f86c3efcbf20ff8f95',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
