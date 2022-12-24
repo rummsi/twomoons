@@ -8,6 +8,12 @@ class ComposerStaticInit8f52c1c83956c3df7d06e2651936732a
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'EasyPeasyICS' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/EasyPeasyICS.php',
+        'PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
+        'PHPMailerOAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauth.php',
+        'PHPMailerOAuthGoogle' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmaileroauthgoogle.php',
+        'POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.pop3.php',
+        'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
         'Smarty' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
         'SmartyBC' => __DIR__ . '/..' . '/smarty/smarty/libs/SmartyBC.class.php',
         'SmartyCompilerException' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smartycompilerexception.php',
@@ -82,6 +88,7 @@ class ComposerStaticInit8f52c1c83956c3df7d06e2651936732a
         'Smarty_Internal_Data' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_data.php',
         'Smarty_Internal_Debug' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_debug.php',
         'Smarty_Internal_ErrorHandler' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_errorhandler.php',
+        'Smarty_Internal_Extension_Clear' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_extension_clear.php',
         'Smarty_Internal_Extension_Handler' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_extension_handler.php',
         'Smarty_Internal_Method_AddAutoloadFilters' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_method_addautoloadfilters.php',
         'Smarty_Internal_Method_AddDefaultModifiers' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_method_adddefaultmodifiers.php',
@@ -153,11 +160,15 @@ class ComposerStaticInit8f52c1c83956c3df7d06e2651936732a
         'Smarty_Internal_Runtime_FilterHandler' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_filterhandler.php',
         'Smarty_Internal_Runtime_Foreach' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_foreach.php',
         'Smarty_Internal_Runtime_GetIncludePath' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_getincludepath.php',
+        'Smarty_Internal_Runtime_Hhvm' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_hhvm.php',
         'Smarty_Internal_Runtime_Inheritance' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_inheritance.php',
         'Smarty_Internal_Runtime_Make_Nocache' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_make_nocache.php',
+        'Smarty_Internal_Runtime_SubTemplate' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_subtemplate.php',
         'Smarty_Internal_Runtime_TplFunction' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_tplfunction.php',
         'Smarty_Internal_Runtime_UpdateCache' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_updatecache.php',
         'Smarty_Internal_Runtime_UpdateScope' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_updatescope.php',
+        'Smarty_Internal_Runtime_ValidateCompiled' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_validatecompiled.php',
+        'Smarty_Internal_Runtime_Var' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_var.php',
         'Smarty_Internal_Runtime_WriteFile' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_runtime_writefile.php',
         'Smarty_Internal_SmartyTemplateCompiler' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_smartytemplatecompiler.php',
         'Smarty_Internal_Template' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_template.php',
@@ -181,6 +192,8 @@ class ComposerStaticInit8f52c1c83956c3df7d06e2651936732a
         'Smarty_Variable' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_variable.php',
         'TPC_yyStackEntry' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_configfileparser.php',
         'TP_yyStackEntry' => __DIR__ . '/..' . '/smarty/smarty/libs/sysplugins/smarty_internal_templateparser.php',
+        'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
+        'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

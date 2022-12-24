@@ -3,13 +3,22 @@
         'name' => 'vendor/new-star',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '1ed09219b86887962d1d47ebbe64404626c6587d',
+        'reference' => 'bca64f4e81aec8bffb26595959e4c2a065823366',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'v5.2.23',
+            'version' => '5.2.23.0',
+            'reference' => '7115df4a6f76281109ebe352900c42403b728bb4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'smarty/smarty' => array(
             'pretty_version' => 'v3.1.34',
             'version' => '3.1.34.0',
@@ -22,7 +31,7 @@
         'vendor/new-star' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '1ed09219b86887962d1d47ebbe64404626c6587d',
+            'reference' => 'bca64f4e81aec8bffb26595959e4c2a065823366',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

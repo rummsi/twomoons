@@ -11,7 +11,8 @@
         }
     ],
     "require": {
-        "php": ">= 7.4"
+        "php": ">= 7.4",
+        "phpmailer/phpmailer": "v5.2.23"
     },
     "require-dev": {
         "smarty/smarty": "v3.1.34"
