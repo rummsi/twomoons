@@ -1,0 +1,16 @@
+{
+    "name": "vendor/new-star",
+    "description": "project ptgames.pt New-Star 2023",
+    "keywords": ["ptgames New-Star 2023"],
+    "type": "project",
+    "license": ["MIT", "BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+    "authors": [
+        {
+            "name": "ptgamespt",
+            "email": "geral@ptgames.pt"
+        }
+    ],
+    "require": {
+        "php": ">= 7.4"
+    }
+}
